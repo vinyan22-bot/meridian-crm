@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meridian — AI Sales Copilot CRM | One-time $67</title>
+<meta name="description" content="The CRM with a built-in AI that scores your leads, writes your emails, and tells you exactly where to focus next. One-time payment. No subscriptions.">
+<meta property="og:title" content="Meridian — AI Sales Copilot CRM">
+<meta property="og:description" content="Lead scoring · Email drafting · Pipeline insights · Meeting summarizer. Single file. Own it forever.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --ink:#0E0C0A;
+  --surface:#161310;
+  --surface-2:#1E1A15;
+  --border:#2A231A;
+  --gold:#C9A24B;
+  --gold-bright:#E6C474;
+  --gold-dim:#7A5E28;
+  --text:#F0EAE0;
+  --muted:#8A8278;
+  --success:#6FA287;
+  --r:14px;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--ink);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+::selection{background:var(--gold);color:var(--ink);}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(14,12,10,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.nav-brand{font-family:'Fraunces',serif;font-size:18px;font-weight:600;letter-spacing:.2px;display:flex;align-items:center;gap:9px;}
+.nav-dot{width:22px;height:22px;border-radius:50%;background:conic-gradient(from 200deg,var(--gold),var(--gold-bright),var(--gold));flex:0 0 auto;}
+.nav-cta{background:var(--gold);color:var(--ink);border:none;border-radius:999px;padding:9px 20px;font-weight:600;font-size:13.5px;cursor:pointer;white-space:nowrap;}
+.nav-cta:hover{background:var(--gold-bright);}
+
+/* HERO */
+.hero{max-width:860px;margin:0 auto;padding:80px 20px 60px;text-align:center;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:7px;background:rgba(201,162,75,.1);border:1px solid rgba(201,162,75,.25);border-radius:999px;padding:5px 14px;font-size:12.5px;color:var(--gold-bright);font-weight:600;letter-spacing:.4px;text-transform:uppercase;margin-bottom:28px;}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(34px,7vw,66px);font-weight:700;line-height:1.08;letter-spacing:-.5px;margin-bottom:22px;}
+.hero h1 em{font-style:italic;color:var(--gold-bright);}
+.hero-sub{font-size:clamp(15px,2.5vw,19px);color:var(--muted);max-width:580px;margin:0 auto 36px;line-height:1.55;}
+.hero-sub strong{color:var(--text);}
+.cta-group{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;}
+.btn-main{background:var(--gold);color:var(--ink);border:none;border-radius:999px;padding:15px 32px;font-size:15.5px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px;}
+.btn-main:hover{background:var(--gold-bright);}
+.btn-ghost{background:transparent;border:1.5px solid var(--border);color:var(--muted);border-radius:999px;padding:14px 24px;font-size:14px;font-weight:500;cursor:pointer;}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-bright);}
+.hero-meta{margin-top:16px;font-size:12.5px;color:var(--muted);}
+
+/* SCREEN MOCKUP */
+.mockup-wrap{max-width:900px;margin:0 auto;padding:0 20px 70px;}
+.mockup-frame{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.7);}
+.mockup-bar{background:var(--surface-2);border-bottom:1px solid var(--border);padding:10px 14px;display:flex;align-items:center;gap:8px;}
+.m-dot{width:10px;height:10px;border-radius:50%;}
+.mockup-inner{padding:20px;display:grid;grid-template-columns:180px 1fr;gap:14px;min-height:310px;}
+@media(max-width:560px){.mockup-inner{grid-template-columns:1fr;min-height:auto;}}
+.mock-sidebar{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:14px;}
+.mock-brand{display:flex;align-items:center;gap:7px;margin-bottom:18px;}
+.mock-brand-dot{width:18px;height:18px;border-radius:50%;background:conic-gradient(from 200deg,var(--gold),var(--gold-bright));flex:0 0 auto;}
+.mock-brand-name{font-family:'Fraunces',serif;font-size:13px;font-weight:600;}
+.mock-nav-item{height:28px;border-radius:6px;margin-bottom:4px;display:flex;align-items:center;padding:0 8px;font-size:11px;color:var(--muted);gap:6px;}
+.mock-nav-item.active{background:rgba(201,162,75,.1);color:var(--gold-bright);}
+.mock-dot{width:6px;height:6px;border-radius:50%;background:currentColor;flex:0 0 auto;}
+.mock-main{display:flex;flex-direction:column;gap:12px;}
+.mock-topbar{display:flex;align-items:center;justify-content:space-between;}
+.mock-title{font-family:'Fraunces',serif;font-size:15px;font-weight:600;}
+.mock-btn{background:var(--gold);color:var(--ink);border:none;border-radius:999px;padding:5px 12px;font-size:11px;font-weight:700;cursor:default;}
+.mock-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.mock-stat{background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:10px;}
+.mock-stat-label{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:5px;}
+.mock-stat-val{font-family:'Fraunces',serif;font-size:18px;font-weight:600;}
+.mock-stat-val.gold{color:var(--gold-bright);}
+.mock-panel{background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:10px;flex:1;}
+.mock-row{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--border);}
+.mock-row:last-child{border-bottom:none;}
+.mock-avatar{width:24px;height:24px;border-radius:50%;background:var(--border);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;color:var(--gold-bright);flex:0 0 auto;}
+.mock-row-text{flex:1;}
+.mock-row-name{font-size:11px;font-weight:600;}
+.mock-row-sub{font-size:9.5px;color:var(--muted);}
+.mock-score{font-size:10px;font-weight:700;color:var(--success);background:rgba(111,162,135,.1);padding:2px 7px;border-radius:999px;}
+
+/* PAIN → SOLUTION */
+.section{max-width:800px;margin:0 auto;padding:60px 20px;}
+.section-label{font-size:11.5px;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold);font-weight:700;margin-bottom:12px;}
+.section h2{font-family:'Fraunces',serif;font-size:clamp(26px,5vw,42px);font-weight:700;line-height:1.15;margin-bottom:18px;}
+.section p{color:var(--muted);font-size:16px;line-height:1.65;margin-bottom:14px;}
+
+.pain-list{list-style:none;margin:28px 0;display:flex;flex-direction:column;gap:10px;}
+.pain-list li{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--muted);}
+.pain-list li::before{content:'—';color:var(--border);flex:0 0 auto;margin-top:2px;}
+
+/* FEATURES */
+.features{max-width:1060px;margin:0 auto;padding:40px 20px 70px;}
+.features-head{text-align:center;margin-bottom:48px;}
+.features-head h2{font-family:'Fraunces',serif;font-size:clamp(26px,5vw,42px);font-weight:700;line-height:1.15;margin-bottom:12px;}
+.features-head p{color:var(--muted);font-size:16px;max-width:480px;margin:0 auto;}
+.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+@media(max-width:620px){.feature-grid{grid-template-columns:1fr;}}
+.feature-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:26px;}
+.feature-card:first-child{border-color:var(--gold-dim);}
+.feature-icon{width:42px;height:42px;border-radius:10px;background:rgba(201,162,75,.1);border:1px solid rgba(201,162,75,.2);display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:18px;}
+.feature-card h3{font-family:'Fraunces',serif;font-size:19px;font-weight:600;margin-bottom:8px;}
+.feature-card p{color:var(--muted);font-size:14px;line-height:1.6;}
+.feature-tag{display:inline-block;font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;background:rgba(201,162,75,.1);color:var(--gold-bright);margin-top:12px;}
+
+/* NICHE STRIP */
+.niches{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:30px 20px;text-align:center;}
+.niche-label{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:18px;}
+.niche-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+.niche-tag{background:var(--surface-2);border:1px solid var(--border);border-radius:999px;padding:7px 16px;font-size:13px;color:var(--muted);}
+
+/* HOW IT WORKS */
+.how{max-width:700px;margin:0 auto;padding:70px 20px;}
+.how h2{font-family:'Fraunces',serif;font-size:clamp(26px,5vw,40px);font-weight:700;text-align:center;margin-bottom:48px;}
+.steps{display:flex;flex-direction:column;gap:0;}
+.step{display:flex;gap:18px;padding-bottom:32px;position:relative;}
+.step:not(:last-child)::after{content:'';position:absolute;left:18px;top:38px;bottom:0;width:1px;background:var(--border);}
+.step-num{width:36px;height:36px;border-radius:50%;background:var(--surface-2);border:1px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:15px;font-weight:600;color:var(--gold-bright);flex:0 0 auto;}
+.step-body h4{font-family:'Fraunces',serif;font-size:17px;font-weight:600;margin-bottom:5px;}
+.step-body p{color:var(--muted);font-size:14px;line-height:1.55;}
+
+/* WHAT'S INCLUDED */
+.included{max-width:660px;margin:0 auto;padding:20px 20px 70px;}
+.included h2{font-family:'Fraunces',serif;font-size:clamp(24px,4vw,36px);font-weight:700;text-align:center;margin-bottom:36px;}
+.include-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.include-list li{display:flex;align-items:flex-start;gap:12px;padding:13px 14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;font-size:14px;}
+.check-icon{width:22px;height:22px;border-radius:50%;background:rgba(111,162,135,.15);display:flex;align-items:center;justify-content:center;flex:0 0 auto;margin-top:1px;}
+.check-icon svg{stroke:var(--success);}
+.include-list li span{color:var(--muted);font-size:13px;display:block;margin-top:2px;}
+
+/* PRICING */
+.pricing{max-width:480px;margin:0 auto;padding:60px 20px 80px;text-align:center;}
+.pricing h2{font-family:'Fraunces',serif;font-size:clamp(26px,5vw,40px);font-weight:700;margin-bottom:8px;}
+.pricing-sub{color:var(--muted);font-size:15px;margin-bottom:36px;}
+.price-card{background:var(--surface);border:1.5px solid var(--gold-dim);border-radius:var(--r);padding:32px;position:relative;overflow:hidden;}
+.price-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.price-badge{display:inline-block;background:rgba(201,162,75,.15);border:1px solid rgba(201,162,75,.3);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:600;color:var(--gold-bright);margin-bottom:18px;}
+.price-name{font-family:'Fraunces',serif;font-size:20px;font-weight:600;margin-bottom:20px;}
+.price-amount{font-family:'Fraunces',serif;font-size:62px;font-weight:700;line-height:1;color:var(--gold-bright);margin-bottom:5px;}
+.price-amount sup{font-size:28px;vertical-align:top;margin-top:14px;margin-right:2px;color:var(--gold);}
+.price-once{color:var(--muted);font-size:13.5px;margin-bottom:24px;}
+.price-features{text-align:left;list-style:none;margin-bottom:28px;display:flex;flex-direction:column;gap:10px;}
+.price-features li{display:flex;align-items:center;gap:9px;font-size:13.5px;}
+.pf-check{color:var(--success);font-size:15px;flex:0 0 auto;}
+.btn-buy{width:100%;background:var(--gold);color:var(--ink);border:none;border-radius:999px;padding:17px;font-size:16px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;}
+.btn-buy:hover{background:var(--gold-bright);}
+.price-foot{margin-top:16px;font-size:12px;color:var(--muted);line-height:1.5;}
+.no-sub-note{margin-top:22px;display:flex;align-items:center;justify-content:center;gap:7px;font-size:13px;color:var(--muted);}
+
+/* FAQ */
+.faq{max-width:660px;margin:0 auto;padding:20px 20px 80px;}
+.faq h2{font-family:'Fraunces',serif;font-size:clamp(24px,4vw,36px);font-weight:700;text-align:center;margin-bottom:36px;}
+.faq-item{border-bottom:1px solid var(--border);padding:18px 0;}
+.faq-item:first-of-type{border-top:1px solid var(--border);}
+.faq-q{font-weight:600;font-size:15px;margin-bottom:8px;display:flex;align-items:flex-start;justify-content:space-between;gap:10px;cursor:pointer;}
+.faq-a{color:var(--muted);font-size:14px;line-height:1.65;}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:28px 20px;text-align:center;font-size:12.5px;color:var(--muted);}
+footer a{color:var(--gold);text-decoration:underline;}
+
+/* DIVIDER */
+.divider{max-width:900px;margin:0 auto 0;padding:0 20px;height:1px;background:var(--border);}
+
+/* UTIL */
+.text-gold{color:var(--gold-bright);}
+.mb-0{margin-bottom:0;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand"><div class="nav-dot"></div>Meridian</div>
+  <button class="nav-cta" onclick="window.open('https://vinyan.gumroad.com/l/mskgp','_blank')">Get Meridian — $67</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">✦ AI Sales Copilot CRM</div>
+  <h1>Your CRM should<br><em>think</em> with you.</h1>
+  <p class="hero-sub">
+    Meridian is a full sales CRM with a built-in AI that <strong>scores your leads</strong>, <strong>writes your follow-ups</strong>, and tells you exactly where to focus next.<br>
+    One payment. No monthly fees. Yours forever.
+  </p>
+  <div class="cta-group">
+    <button class="btn-main" onclick="window.open('https://vinyan.gumroad.com/l/mskgp','_blank')">
+      ✦ Get Meridian for $67
+    </button>
+    <button class="btn-ghost" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+      See what's inside
+    </button>
+  </div>
+  <p class="hero-meta">Single HTML file · Runs in your browser · No account required</p>
+</section>
+
+<!-- MOCKUP -->
+<div class="mockup-wrap">
+  <div class="mockup-frame">
+    <div class="mockup-bar">
+      <div class="m-dot" style="background:#C1665A;"></div>
+      <div class="m-dot" style="background:#C9A24B;"></div>
+      <div class="m-dot" style="background:#6FA287;"></div>
+      <div style="flex:1;text-align:center;font-size:11px;color:#4A433A;">meridian-crm.html</div>
+    </div>
+    <div class="mockup-inner">
+      <div class="mock-sidebar">
+        <div class="mock-brand"><div class="mock-brand-dot"></div><span class="mock-brand-name">Meridian</span></div>
+        <div class="mock-nav-item active"><div class="mock-dot"></div>Dashboard</div>
+        <div class="mock-nav-item"><div class="mock-dot"></div>Pipeline</div>
+        <div class="mock-nav-item"><div class="mock-dot"></div>Contacts</div>
+        <div class="mock-nav-item"><div class="mock-dot"></div>Tasks</div>
+        <div style="margin-top:16px;padding:10px;background:rgba(201,162,75,.08);border:1px solid rgba(201,162,75,.2);border-radius:8px;">
+          <div style="font-size:9.5px;color:#C9A24B;font-weight:700;margin-bottom:5px;">✦ AI COPILOT</div>
+          <div style="font-size:9px;color:#8A8278;">Score leads · Draft emails · Insights · Summarize notes</div>
+        </div>
+      </div>
+      <div class="mock-main">
+        <div class="mock-topbar">
+          <span class="mock-title">Dashboard</span>
+          <button class="mock-btn">✦ Copilot</button>
+        </div>
+        <div class="mock-stats">
+          <div class="mock-stat"><div class="mock-stat-label">Open pipeline</div><div class="mock-stat-val gold">$677k</div></div>
+          <div class="mock-stat"><div class="mock-stat-label">Won this month</div><div class="mock-stat-val">$220k</div></div>
+          <div class="mock-stat"><div class="mock-stat-label">Tasks today</div><div class="mock-stat-val">3</div></div>
+        </div>
+        <div class="mock-panel">
+          <div style="font-size:10.5px;color:#8A8278;margin-bottom:8px;font-weight:600;">RECENT DEALS</div>
+          <div class="mock-row"><div class="mock-avatar">DW</div><div class="mock-row-text"><div class="mock-row-name">Dana Whitfield</div><div class="mock-row-sub">Qualified · $450,000</div></div><div class="mock-score">87/100</div></div>
+          <div class="mock-row"><div class="mock-avatar">ML</div><div class="mock-row-text"><div class="mock-row-name">Marcus Lee</div><div class="mock-row-sub">Proposal · $4,800</div></div><div class="mock-score">72/100</div></div>
+          <div class="mock-row"><div class="mock-avatar">PA</div><div class="mock-row-text"><div class="mock-row-name">Priya Anand</div><div class="mock-row-sub">Contacted · $6,000</div></div><div class="mock-score">54/100</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAIN -->
+<div class="divider"></div>
+<section class="section">
+  <div class="section-label">The problem</div>
+  <h2>Most CRMs store your data.<br>None of them help you <em style="color:var(--gold-bright);font-style:italic;">act</em> on it.</h2>
+  <p>You have leads sitting in stages they've been in for weeks. You forget to follow up. You stare at a contact and try to remember what to write. You have no real idea which deal is going to close.</p>
+  <ul class="pain-list">
+    <li>You're paying $50–$150/month for a database with a pretty UI</li>
+    <li>The "AI" in big-name CRMs is buried behind expensive tiers you can't afford</li>
+    <li>You're copying and pasting notes, writing emails from scratch, guessing who to call</li>
+    <li>Your pipeline has 8 deals and you have no idea which one deserves your next hour</li>
+  </ul>
+  <p class="mb-0">Meridian fixes all of it — for a single payment, with no monthly bill coming back next month.</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="features-head">
+    <div class="section-label" style="text-align:center;">What's inside</div>
+    <h2>Four AI features that actually move deals forward</h2>
+    <p>Every AI feature runs live against your real pipeline data, right inside the app.</p>
+  </div>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🎯</div>
+      <h3>AI Lead Scoring</h3>
+      <p>Every deal gets scored 0–100 based on value, engagement, stage, how long since last contact, and your own notes. You get a specific rationale and a recommended next action — not a generic number.</p>
+      <span class="feature-tag">Score updates save to each deal card</span>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">✉️</div>
+      <h3>AI Email Drafting</h3>
+      <p>Pick a contact and a tone — check-in, re-engage, post-meeting follow-up, or proposal nudge. Meridian reads their notes and deal history and writes a ready-to-send email in seconds.</p>
+      <span class="feature-tag">One-click copy to clipboard</span>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <h3>Pipeline Insights</h3>
+      <p>One click analyzes your entire pipeline — stalled deals, stage imbalances, win rate, open value — and gives you 2–4 ranked, specific things to fix. Not a dashboard. Actionable advice.</p>
+      <span class="feature-tag">Available from dashboard + Copilot panel</span>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎙️</div>
+      <h3>Meeting Notes Summarizer</h3>
+      <p>Paste raw notes from any call — even messy shorthand. Meridian returns a clean summary, key points, action items, and a suggested follow-up. Save it to the contact or turn it into tasks with one tap.</p>
+      <span class="feature-tag">Creates tasks automatically from action items</span>
+    </div>
+  </div>
+</section>
+
+<!-- NICHES -->
+<div class="niches">
+  <div class="niche-label">Built for</div>
+  <div class="niche-tags">
+    <span class="niche-tag">Real estate agents</span>
+    <span class="niche-tag">Business coaches</span>
+    <span class="niche-tag">Marketing consultants</span>
+    <span class="niche-tag">Sales freelancers</span>
+    <span class="niche-tag">Agency owners</span>
+    <span class="niche-tag">Executive coaches</span>
+    <span class="niche-tag">Recruiters</span>
+    <span class="niche-tag">Anyone selling high-ticket services</span>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <h2>Up and running in under 10 minutes</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h4>Buy once, download instantly</h4>
+        <p>You get a single HTML file and a PDF setup guide. No installation, no account, no app store. Open the file in any browser.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h4>Add your Claude API key</h4>
+        <p>Anthropic gives you a Claude API key. Paste it into Meridian's settings (takes about 3 minutes). The AI features light up instantly. You only pay Anthropic for what you use — a few cents per request.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h4>Add your contacts and deals</h4>
+        <p>Import your pipeline or start fresh. Meridian comes pre-loaded with sample data so you can see exactly how it works before you clear it out.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <h4>Let the Copilot work</h4>
+        <p>Score your leads. Draft a follow-up. Get pipeline insights. Summarize your last call. Your next action is always one click away.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- INCLUDED -->
+<section class="included">
+  <h2>Everything in one purchase</h2>
+  <ul class="include-list">
+    <li>
+      <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12l4 4L19 7"/></svg></div>
+      <div><strong>Meridian CRM — full single-file HTML app</strong><span>Full pipeline, contacts, tasks, dashboard. Runs in any browser, no server needed.</span></div>
+    </li>
+    <li>
+      <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12l4 4L19 7"/></svg></div>
+      <div><strong>4 live AI Copilot features</strong><span>Lead scoring · Email drafting · Pipeline insights · Meeting note summarizer</span></div>
+    </li>
+    <li>
+      <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12l4 4L19 7"/></svg></div>
+      <div><strong>PDF setup guide</strong><span>Step-by-step: API key setup, GitHub Pages deployment, first pipeline walkthrough.</span></div>
+    </li>
+    <li>
+      <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12l4 4L19 7"/></svg></div>
+      <div><strong>Lifetime access + future updates</strong><span>Pay once. Any updates to the file are yours to download.</span></div>
+    </li>
+    <li>
+      <div class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12l4 4L19 7"/></svg></div>
+      <div><strong>Export / import backup</strong><span>Your data never leaves your browser. Download a JSON backup anytime.</span></div>
+    </li>
+  </ul>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <h2>One price. Forever.</h2>
+  <p class="pricing-sub">No monthly subscription. No per-seat fees. No hidden tiers.</p>
+  <div class="price-card">
+    <span class="price-badge">✦ Lifetime access</span>
+    <div class="price-name">Meridian — AI Sales Copilot CRM</div>
+    <div class="price-amount"><sup>$</sup>67</div>
+    <div class="price-once">one-time payment · instant download</div>
+    <ul class="price-features">
+      <li><span class="pf-check">✓</span> Full CRM (pipeline, contacts, tasks, dashboard)</li>
+      <li><span class="pf-check">✓</span> AI lead scoring with rationale + next action</li>
+      <li><span class="pf-check">✓</span> AI email drafting (4 tones)</li>
+      <li><span class="pf-check">✓</span> AI pipeline insights (on-demand)</li>
+      <li><span class="pf-check">✓</span> AI meeting notes summarizer + task creator</li>
+      <li><span class="pf-check">✓</span> PDF setup guide included</li>
+      <li><span class="pf-check">✓</span> Lifetime updates via Gumroad</li>
+      <li><span class="pf-check">✓</span> No monthly fees, ever</li>
+    </ul>
+    <button class="btn-buy" onclick="window.open('https://vinyan.gumroad.com/l/mskgp','_blank')">
+      ✦ Get Meridian Now — $67
+    </button>
+    <p class="price-foot">Secure checkout via Gumroad. Instant delivery. You'll need a Claude API key from Anthropic for AI features (free to sign up, pay-as-you-go usage — a few cents per request).</p>
+  </div>
+  <div class="no-sub-note">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12l4 4L19 7"/></svg>
+    Compare to HubSpot Starter at $20/mo · Pipedrive at $49/mo · Salesforce at $75/mo
+  </div>
+</section>
+
+<!-- FAQ -->
+<div class="divider"></div>
+<section class="faq">
+  <h2>Questions</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Do I need to pay for the AI features separately?</div>
+    <div class="faq-a">Yes — the AI runs on Anthropic's Claude API, which you access with your own API key. It's free to sign up and you pay only for what you use. Typical usage (scoring 10 leads, drafting 5 emails) costs a few cents. There's no monthly commitment.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Where is my data stored?</div>
+    <div class="faq-a">Entirely in your browser's localStorage — nothing goes to a server. Your contacts and deals never leave your device unless you use the AI features, which send only the relevant data to Anthropic's API (no personal identifiers beyond what you type).</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Do I need to know how to code?</div>
+    <div class="faq-a">No. You open the file in a browser and it works. The PDF setup guide walks you through getting your Claude API key and optionally hosting on GitHub Pages (free), with no technical knowledge required.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">What's the difference between this and HubSpot / Pipedrive?</div>
+    <div class="faq-a">Those are SaaS tools — you rent access monthly and your data lives on their servers. Meridian is a file you own. The AI is deeply integrated rather than a bolt-on, and there's no subscription. The trade-off: no email sync or calendar integration (yet).</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Can I use this on my phone?</div>
+    <div class="faq-a">Yes. Meridian is fully responsive with a mobile-optimised layout and bottom navigation. Host it on GitHub Pages and access it from any device via browser.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Is there a refund policy?</div>
+    <div class="faq-a">Because this is a digital download with instant access, sales are final. If you have an issue, contact us via Gumroad and we'll do our best to help.</div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div style="text-align:center;padding:20px 20px 80px;">
+  <p style="font-family:'Fraunces',serif;font-size:clamp(22px,4vw,34px);font-weight:600;margin-bottom:18px;line-height:1.2;">Stop guessing which lead<br>to work on next.</p>
+  <button class="btn-main" onclick="window.open('https://vinyan.gumroad.com/l/mskgp','_blank')" style="font-size:16px;padding:16px 36px;">
+    ✦ Get Meridian — $67 one-time
+  </button>
+  <p style="margin-top:14px;font-size:13px;color:var(--muted);">Instant download · Single file · Works in any browser</p>
+</div>
+
+<footer>
+  <p>Meridian is an independent product by <a href="https://vinyan.gumroad.com/l/mskgp" target="_blank">Vinyan</a>. Not affiliated with Anthropic.</p>
+  <p style="margin-top:6px;">Questions? Contact via <a href="https://vinyan.gumroad.com/l/mskgp" target="_blank">Gumroad</a>.</p>
+</footer>
+
+</body>
+</html>
